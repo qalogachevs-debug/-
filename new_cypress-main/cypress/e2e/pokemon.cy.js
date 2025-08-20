@@ -1,8 +1,8 @@
 describe('аватар тренера', function (){
 it('Покупка нового аватара для своего тренера', function () {
         cy.visit('https://pokemonbattle.ru');
-       cy.get('#k_email').type('semank45sema@yandex.ru');
-       cy.get('#k_password').type('0209011975Ss');
+       cy.get('#k_email').type('USER_LOGIN');
+       cy.get('#k_password').type('USER_PASSWORD');
        cy.get('.MuiButton-root').click();
        cy.get('.header_card_trainer').click();
        cy.get('[data-qa="shop"]').click();
@@ -20,4 +20,5 @@ it('Покупка нового аватара для своего тренер�
        cy.contains('Покупка прошла успешно').should('be.visible');
        cy.get('.style_1_base_link_blue').click();
 })
+
 })
